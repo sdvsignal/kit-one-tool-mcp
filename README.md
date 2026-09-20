@@ -7,6 +7,23 @@ tool with no API key and no network, this is that.
 
 It is deliberately one tool. A second tool, or a Cloudflare Worker, is a Build Packet, not a bigger version of this.
 
+## Install
+
+Once it is on npm, in Claude Code:
+
+```bash
+claude mcp add kit-one-tool-mcp -- npx -y @sdvsignal/kit-one-tool-mcp
+```
+
+Or by hand in `.mcp.json`:
+
+```json
+{ "mcpServers": { "kit-one-tool-mcp": { "command": "npx", "args": ["-y", "@sdvsignal/kit-one-tool-mcp"] } } }
+```
+
+Registry name: `io.github.sdvsignal/kit-one-tool-mcp` (see `server.json`). Until the npm package is published,
+clone this repo and point the command at `node src/index.js` instead.
+
 ## Try it without an API key
 
 The tests run offline. No key, no network, no Claude.

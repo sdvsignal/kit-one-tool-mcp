@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.sdvsignal/kit-one-tool-mcp",
+  "description": "One-tool MCP server sample: described schema, unhappy paths handled, tests that need no API key.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/sdvsignal/kit-one-tool-mcp",
+    "source": "github",
+    "id": "1377695457"
+  },
+  "websiteUrl": "https://kit-sdvsignal.pages.dev",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@sdvsignal/kit-one-tool-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "THING_API_KEY",
+          "description": "API key for the service the tool calls. The sample returns a plain message instead of throwing when it is missing.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "THING_BASE_URL",
+          "description": "Base URL of the service the tool calls. Defaults to https://api.example.com in the sample.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

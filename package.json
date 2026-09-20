@@ -1,9 +1,19 @@
 {
-  "name": "one-tool-mcp",
+  "name": "@sdvsignal/kit-one-tool-mcp",
+  "mcpName": "io.github.sdvsignal/kit-one-tool-mcp",
   "version": "0.1.0",
-  "private": true,
+  "description": "One-tool MCP server sample in TypeScript-friendly JS: described schema, unhappy paths handled, 15 tests that run with no API key.",
+  "license": "MIT",
+  "author": "SDV Signal",
+  "homepage": "https://kit-sdvsignal.pages.dev",
+  "repository": { "type": "git", "url": "git+https://github.com/sdvsignal/kit-one-tool-mcp.git" },
+  "bugs": { "url": "https://github.com/sdvsignal/kit-one-tool-mcp/issues" },
+  "keywords": ["mcp", "model-context-protocol", "mcp-server", "claude", "claude-code", "sample", "template"],
   "type": "module",
-  "bin": { "one-tool-mcp": "src/index.js" },
+  "bin": { "kit-one-tool-mcp": "src/index.js" },
+  "files": ["src", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" },
   "scripts": {
     "start": "node src/index.js",
     "test": "node --test test/*.test.mjs"
