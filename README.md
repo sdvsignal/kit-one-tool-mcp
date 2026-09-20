@@ -1,15 +1,29 @@
 # one-tool-mcp
 
-A working sample of what an **MCP Basic** build from [Kit](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp) looks like: one MCP tool, a described schema, the unhappy paths handled, a smoke prompt, and a clean removal path. Clone it, rename `THING`, and you have the shape.
+**Most MCP examples show you the happy path and then fail on somebody's laptop at 401.** This one is
+the opposite: one tool, a described schema, and 15 tests that are mostly the unhappy paths — missing
+key, 401, 403, 429, 503, DNS failure, non-JSON body, empty result.
+
+Clone it, rename `THING`, and you have the shape of a working MCP server. It is a sample of what an
+**MCP Basic** build from Kit looks like when it is handed over.
 
 If you came here looking for a one tool MCP sample, an MCP server example in TypeScript, or a way to test an MCP
 tool with no API key and no network, this is that.
 
 It is deliberately one tool. A second tool, or a Cloudflare Worker, is a Build Packet, not a bigger version of this.
 
-## Install
+## 60-second start — no API key, no network, no Claude
 
-Once it is on npm, in Claude Code:
+```bash
+git clone https://github.com/sdvsignal/kit-one-tool-mcp
+cd kit-one-tool-mcp && npm install && npm test
+```
+
+15 tests, all offline. Three of them stand up a real MCP client against the real server over an
+in-memory transport and call the tool, so the wiring is tested, not just the function. If those pass,
+the server works — you have not needed a key yet.
+
+## Add it to Claude Code
 
 ```bash
 claude mcp add kit-one-tool-mcp -- npx -y @sdvsignal/kit-one-tool-mcp
@@ -21,30 +35,8 @@ Or by hand in `.mcp.json`:
 { "mcpServers": { "kit-one-tool-mcp": { "command": "npx", "args": ["-y", "@sdvsignal/kit-one-tool-mcp"] } } }
 ```
 
-Registry name: `io.github.sdvsignal/kit-one-tool-mcp` (see `server.json`). Until the npm package is published,
-clone this repo and point the command at `node src/index.js` instead.
-
-## Try it without an API key
-
-The tests run offline. No key, no network, no Claude.
-
-```bash
-npm install
-npm test
-```
-
-15 tests. Most of them are unhappy paths, because that is where a bought tool actually fails on somebody: missing key, 401, 403, 429, a 503, a DNS failure, a body that is not JSON, and an empty result. Three of them stand up a real MCP client against the real server over an in-memory transport and call the tool, so the wiring is tested, not just the function.
-
-## What is in here
-
-| File | What it is |
-|---|---|
-| `src/search-things.js` | The one tool. Takes its dependencies as an argument, which is why it is testable without a key. |
-| `src/server.js` | Server wiring. Registers exactly one tool. |
-| `src/index.js` | The entrypoint. Connects stdio and nothing else. |
-| `test/` | The 15 tests above. |
-
-## Add it to Claude Code
+Registry name: `io.github.sdvsignal/kit-one-tool-mcp` (see `server.json`). **Until the npm package is
+published, clone this repo and point the command at `node src/index.js` instead:**
 
 ```bash
 export THING_API_KEY=...
@@ -75,13 +67,14 @@ Type this to Claude. This is the test that it is really wired up:
 
 You should get up to 3 results with names and ids. If nothing matches you get `No THINGs matched "onboarding"`, which is correct and not a failure. Telling the model that an empty result is empty is most of why it stops retrying.
 
-## Remove it
+## What is in here
 
-```bash
-claude mcp remove one-tool
-```
-
-Claude Desktop: delete the `one-tool` block and restart. The server keeps no state, so nothing is left behind.
+| File | What it is |
+|---|---|
+| `src/search-things.js` | The one tool. Takes its dependencies as an argument, which is why it is testable without a key. |
+| `src/server.js` | Server wiring. Registers exactly one tool. |
+| `src/index.js` | The entrypoint. Connects stdio and nothing else. |
+| `test/` | The 15 tests above. |
 
 ## Errors you may see
 
@@ -96,6 +89,14 @@ Claude Desktop: delete the `one-tool` block and restart. The server keeps no sta
 
 None of them return a stack trace. A tool that throws raw errors at the model makes it guess.
 
+## Remove it
+
+```bash
+claude mcp remove one-tool
+```
+
+Claude Desktop: delete the `one-tool` block and restart. The server keeps no state, so nothing is left behind.
+
 ## Making it yours
 
 1. Rename `search_things` for what it actually does, from the caller's point of view.
@@ -104,15 +105,28 @@ None of them return a stack trace. A tool that throws raw errors at the model ma
 4. Point `THING_BASE_URL` and the auth header at the real API.
 5. Run `npm test`, then run the smoke prompt in Claude. A passing test is not proof the tool works against the real API.
 
-## Want this built for your API instead
+## Free here vs. paid
 
-**MCP Basic, $199.** One tool, the schema, handoff notes, a smoke prompt and the enable/disable path, built against your API and tested against it before delivery. Need more than one tool, or a Worker? That is the **Build Packet, $399**.
+**This repo is MIT and complete** — the tool, the tests, the error table, the removal path. Nothing
+is held back. If you are building your own MCP server, take it and go.
 
-Just want the repo itself set up for Claude Code first? **Setup Lite $29** is a CLAUDE.md, a tool allowlist and one skill for your repo, back as a PR in 24h; **Setup Sprint $99** is the full setup in 48h.
+Paid is the same shape built against *your* API and tested against it before delivery, which is the
+part the offline tests above deliberately cannot do: **MCP Basic $199** — one tool, the schema,
+handoff notes, a smoke prompt and the enable/disable path. Need more than one tool, or a Worker?
+**Build Packet $399.** Just want the repo itself set up for Claude Code first? **Setup Lite $29**
+(back as a PR in 24h) or **Setup Sprint $99** (48h).
 
-Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's spec, 5 stills
-and 2 revision rounds, in 72 hours.
+Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's
+spec, 5 stills and 2 revision rounds, in 72 hours.
 
-All of it is on the Kit page: **https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp**
+**→ Scope and order: [kit.sdvsignal.com](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp)**
+
+We use AI tools including Claude; a person reviews every deliverable before it ships.
+Independent project, not affiliated with Anthropic.
+
+## Related
+
+- [kit-claude-code-starter](https://github.com/sdvsignal/kit-claude-code-starter) — the full Claude Code setup, free
+- [kit-plugins](https://github.com/sdvsignal/kit-plugins) — four installable Claude Code plugins
 
 MIT licensed. Use it for your own work, no attribution needed.
