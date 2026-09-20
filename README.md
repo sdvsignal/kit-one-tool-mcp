@@ -2,6 +2,9 @@
 
 A working sample of what an **MCP Basic** build from [Kit](https://kit-sdvsignal.pages.dev) looks like: one MCP tool, a described schema, the unhappy paths handled, a smoke prompt, and a clean removal path. Clone it, rename `THING`, and you have the shape.
 
+If you came here looking for a one tool MCP sample, an MCP server example in TypeScript, or a way to test an MCP
+tool with no API key and no network, this is that.
+
 It is deliberately one tool. A second tool, or a Cloudflare Worker, is a Build Packet, not a bigger version of this.
 
 ## Try it without an API key
@@ -90,6 +93,9 @@ None of them return a stack trace. A tool that throws raw errors at the model ma
 
 Just want the repo itself set up for Claude Code first? **Setup Lite $29** is a CLAUDE.md, a tool allowlist and one skill for your repo, back as a PR in 24h; **Setup Sprint $99** is the full setup in 48h.
 
-All four are on the Kit page: **https://kit-sdvsignal.pages.dev**
+Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's spec, 5 stills
+and 2 revision rounds, in 72 hours.
+
+All of it is on the Kit page: **https://kit-sdvsignal.pages.dev**
 
 MIT licensed. Use it for your own work, no attribution needed.
