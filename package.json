@@ -5,7 +5,7 @@
   "description": "One-tool MCP server sample in TypeScript-friendly JS: described schema, unhappy paths handled, 15 tests that run with no API key.",
   "license": "MIT",
   "author": "SDV Signal",
-  "homepage": "https://kit-sdvsignal.pages.dev",
+  "homepage": "https://kit.sdvsignal.com",
   "repository": { "type": "git", "url": "git+https://github.com/sdvsignal/kit-one-tool-mcp.git" },
   "bugs": { "url": "https://github.com/sdvsignal/kit-one-tool-mcp/issues" },
   "keywords": ["mcp", "model-context-protocol", "mcp-server", "claude", "claude-code", "sample", "template"],

@@ -1,6 +1,6 @@
 # one-tool-mcp
 
-A working sample of what an **MCP Basic** build from [Kit](https://kit-sdvsignal.pages.dev) looks like: one MCP tool, a described schema, the unhappy paths handled, a smoke prompt, and a clean removal path. Clone it, rename `THING`, and you have the shape.
+A working sample of what an **MCP Basic** build from [Kit](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp) looks like: one MCP tool, a described schema, the unhappy paths handled, a smoke prompt, and a clean removal path. Clone it, rename `THING`, and you have the shape.
 
 If you came here looking for a one tool MCP sample, an MCP server example in TypeScript, or a way to test an MCP
 tool with no API key and no network, this is that.
@@ -113,6 +113,6 @@ Just want the repo itself set up for Claude Code first? **Setup Lite $29** is a 
 Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's spec, 5 stills
 and 2 revision rounds, in 72 hours.
 
-All of it is on the Kit page: **https://kit-sdvsignal.pages.dev**
+All of it is on the Kit page: **https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp**
 
 MIT licensed. Use it for your own work, no attribution needed.
