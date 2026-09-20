@@ -88,6 +88,8 @@ None of them return a stack trace. A tool that throws raw errors at the model ma
 
 **MCP Basic, $199.** One tool, the schema, handoff notes, a smoke prompt and the enable/disable path, built against your API and tested against it before delivery. Need more than one tool, or a Worker? That is the **Build Packet, $399**.
 
-Both are on the Kit page: **https://kit-sdvsignal.pages.dev**
+Just want the repo itself set up for Claude Code first? **Setup Lite $29** is a CLAUDE.md, a tool allowlist and one skill for your repo, back as a PR in 24h; **Setup Sprint $99** is the full setup in 48h.
+
+All four are on the Kit page: **https://kit-sdvsignal.pages.dev**
 
 MIT licensed. Use it for your own work, no attribution needed.
