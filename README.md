@@ -119,7 +119,7 @@ handoff notes, a smoke prompt and the enable/disable path. Need more than one to
 Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's
 spec, 5 stills and 2 revision rounds, in 72 hours.
 
-**→ Scope and order: [kit.sdvsignal.com](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=kit-one-tool-mcp)**
+**→ Scope and order: [kit.sdvsignal.com](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=gh-readme-kit-one-tool-mcp)**
 
 We use AI tools including Claude; a person reviews every deliverable before it ships.
 Independent project, not affiliated with Anthropic.
