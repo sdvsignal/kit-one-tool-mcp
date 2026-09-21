@@ -25,23 +25,44 @@ the server works — you have not needed a key yet.
 
 ## Add it to Claude Code
 
+**Today, this is the one that works.** Clone it first, then point Claude Code at the local file:
+
+```bash
+git clone https://github.com/sdvsignal/kit-one-tool-mcp
+cd kit-one-tool-mcp && npm install
+export THING_API_KEY=...
+claude mcp add kit-one-tool -- node "$PWD/src/index.js"
+```
+
+Or by hand in `.mcp.json`, using the absolute path to where you cloned it:
+
+```json
+{
+  "mcpServers": {
+    "kit-one-tool": {
+      "command": "node",
+      "args": ["/absolute/path/to/kit-one-tool-mcp/src/index.js"],
+      "env": { "THING_API_KEY": "..." }
+    }
+  }
+}
+```
+
+### Once it is on npm
+
+`@sdvsignal/kit-one-tool-mcp` is **not published yet**, so the two commands below will fail with a
+404 if you try them today. They are here so you know what the install becomes, not so you can run
+it now:
+
 ```bash
 claude mcp add kit-one-tool-mcp -- npx -y @sdvsignal/kit-one-tool-mcp
 ```
-
-Or by hand in `.mcp.json`:
 
 ```json
 { "mcpServers": { "kit-one-tool-mcp": { "command": "npx", "args": ["-y", "@sdvsignal/kit-one-tool-mcp"] } } }
 ```
 
-Registry name: `io.github.sdvsignal/kit-one-tool-mcp` (see `server.json`). **Until the npm package is
-published, clone this repo and point the command at `node src/index.js` instead:**
-
-```bash
-export THING_API_KEY=...
-claude mcp add one-tool -- node /absolute/path/to/one-tool-mcp/src/index.js
-```
+Registry name: `io.github.sdvsignal/kit-one-tool-mcp` (see `server.json`).
 
 Claude Desktop instead: add this to the config file and restart the app.
 
