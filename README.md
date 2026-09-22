@@ -1,5 +1,7 @@
 # kit-one-tool-mcp
 
+![license MIT](https://img.shields.io/badge/license-MIT-3da639) ![tests 15 offline](https://img.shields.io/badge/tests-15%20offline-3da639) ![api key not needed](https://img.shields.io/badge/api%20key-not%20needed-3da639) [![listed on glama](https://img.shields.io/badge/listed%20on-glama-6b4fbb)](https://glama.ai/mcp/servers/sdvsignal/kit-one-tool-mcp) [![8 more servers wired $49](https://img.shields.io/badge/8%20more%20servers%20wired-$49-1f5f4a)](https://buy.stripe.com/aFaeVfcsf0fc1v42sVf3a08?client_reference_id=from-gh-badge-mcp)
+
 **Most MCP examples show you the happy path and then fail on somebody's laptop at 401.** This one is
 the opposite: one tool, a described schema, and 15 tests that are mostly the unhappy paths — missing
 key, 401, 403, 429, 503, DNS failure, non-JSON body, empty result.
