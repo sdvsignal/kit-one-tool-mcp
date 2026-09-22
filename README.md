@@ -12,6 +12,16 @@ tool with no API key and no network, this is that.
 
 It is deliberately one tool. A second tool, or a Cloudflare Worker, is a Build Packet, not a bigger version of this.
 
+## Want your repo set up for Claude Code first?
+
+This repo is MIT and complete — take it and go. If you want a CLAUDE.md, a tool allowlist and one
+skill wired for *your* repo:
+
+**[Buy Setup Lite — $29](https://buy.stripe.com/3cI14pcsf6DA8Xw4B3f3a0a?client_reference_id=from-gh-one-tool-mcp)** · ~24h, handed back as a PR.
+
+Details: [kit.sdvsignal.com/#setup-lite](https://kit.sdvsignal.com/#setup-lite) · the same shape as
+this repo built against *your* API is [MCP Basic $199](https://kit.sdvsignal.com/#mcp-basic).
+
 ## 60-second start — no API key, no network, no Claude
 
 ```bash
