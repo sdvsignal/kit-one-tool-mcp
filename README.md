@@ -136,6 +136,22 @@ Claude Desktop: delete the `one-tool` block and restart. The server keeps no sta
 4. Point `THING_BASE_URL` and the auth header at the real API.
 5. Run `npm test`, then run the smoke prompt in Claude. A passing test is not proof the tool works against the real API.
 
+## You did not want to build one, you wanted eight wired
+
+Half the people who land here from an MCP directory are not building a server — they want the
+common ones *connected*, and they hit the same wall every time, which is the JSON rather than the
+server.
+
+**[MCP Config Pack — $49](https://buy.stripe.com/aFaeVfcsf0fc1v42sVf3a08?client_reference_id=from-gh-one-tool-mcp)** is eight ready configs (filesystem,
+GitHub, Postgres, context7 and four more), each with the smoke prompt and the pass condition that
+tells you it is actually connected rather than merely listed. Offline, no telemetry, instant
+download. Two of the eight need no token at all, so you can prove the wiring before you go near a
+credential.
+
+Details and the full list: [kit.sdvsignal.com/#mcp-config-pack](https://kit.sdvsignal.com/#mcp-config-pack?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=gh-readme-kit-one-tool-mcp-49).
+If you would rather have them wired *into your repo* alongside hooks and skills, that is
+[Setup Sprint $99](https://kit.sdvsignal.com/#setup-sprint), not this.
+
 ## Free here vs. paid
 
 **This repo is MIT and complete** — the tool, the tests, the error table, the removal path. Nothing
@@ -145,7 +161,8 @@ Paid is the same shape built against *your* API and tested against it before del
 part the offline tests above deliberately cannot do: **MCP Basic $199** — one tool, the schema,
 handoff notes, a smoke prompt and the enable/disable path. Need more than one tool, or a Worker?
 **Build Packet $399.** Just want the repo itself set up for Claude Code first? **Setup Lite $29**
-(back as a PR in 24h) or **Setup Sprint $99** (48h).
+(back as a PR in 24h) or **Setup Sprint $99** (48h). Just want other people's servers connected?
+**MCP Config Pack $49**, above.
 
 Shipping an iOS app on top of it? **Preview Pack $149** is one App Store preview video to Apple's
 spec, 5 stills and 2 revision rounds, in 72 hours.
