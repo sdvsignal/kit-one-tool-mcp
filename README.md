@@ -92,6 +92,19 @@ Claude Desktop instead: add this to the config file and restart the app.
 
 Your key lives in your environment. It is not in this repo, and there is no default value that quietly works.
 
+## Run it in a container
+
+Same one tool, same stdio, nothing listening on a port:
+
+```
+docker build -t one-tool-mcp .
+docker run --rm -i -e THING_API_KEY=... one-tool-mcp
+```
+
+`-i` matters — the server talks over stdin/stdout, so without it there is nothing to talk to. To
+point Claude Desktop at the image instead of at node, use `"command": "docker"` with
+`"args": ["run", "--rm", "-i", "-e", "THING_API_KEY", "one-tool-mcp"]`.
+
 ## Smoke prompt
 
 Type this to Claude. This is the test that it is really wired up:
@@ -108,6 +121,7 @@ You should get up to 3 results with names and ids. If nothing matches you get `N
 | `src/server.js` | Server wiring. Registers exactly one tool. |
 | `src/index.js` | The entrypoint. Connects stdio and nothing else. |
 | `test/` | The 15 tests above. |
+| `Dockerfile` | Builds the image above. Copies the lockfile and `src/`, runs `npm ci --omit=dev`. |
 
 ## Errors you may see
 
