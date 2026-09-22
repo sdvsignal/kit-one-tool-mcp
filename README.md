@@ -1,4 +1,4 @@
-# one-tool-mcp
+# kit-one-tool-mcp
 
 **Most MCP examples show you the happy path and then fail on somebody's laptop at 401.** This one is
 the opposite: one tool, a described schema, and 15 tests that are mostly the unhappy paths — missing
