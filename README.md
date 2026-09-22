@@ -21,8 +21,8 @@ skill wired for *your* repo:
 
 **[Buy Setup Lite — $29](https://buy.stripe.com/3cI14pcsf6DA8Xw4B3f3a0a?client_reference_id=from-gh-one-tool-mcp)** · ~24h, handed back as a PR.
 
-Details: [kit.sdvsignal.com/#setup-lite](https://kit.sdvsignal.com/#setup-lite) · the same shape as
-this repo built against *your* API is [MCP Basic $199](https://kit.sdvsignal.com/#mcp-basic).
+Details: [kit.sdvsignal.com/#setup-lite](https://kit.sdvsignal.com/?utm_source=github&utm_medium=readme&utm_campaign=setup-lite&utm_content=kit-one-tool-mcp#setup-lite) · the same shape as
+this repo built against *your* API is [MCP Basic $199](https://kit.sdvsignal.com/?utm_source=github&utm_medium=readme&utm_campaign=mcp-basic&utm_content=kit-one-tool-mcp#mcp-basic).
 
 ## 60-second start — no API key, no network, no Claude
 
@@ -30,6 +30,10 @@ this repo built against *your* API is [MCP Basic $199](https://kit.sdvsignal.com
 git clone https://github.com/sdvsignal/kit-one-tool-mcp
 cd kit-one-tool-mcp && npm install && npm test
 ```
+
+No git? The same tracked tree ships as one archive on every release:
+[latest release](https://github.com/sdvsignal/kit-one-tool-mcp/releases/latest). Unzip it, then the
+same `npm install && npm test`.
 
 15 tests, all offline. Three of them stand up a real MCP client against the real server over an
 in-memory transport and call the tool, so the wiring is tested, not just the function. If those pass,
@@ -164,9 +168,9 @@ tells you it is actually connected rather than merely listed. Offline, no teleme
 download. Two of the eight need no token at all, so you can prove the wiring before you go near a
 credential.
 
-Details and the full list: [kit.sdvsignal.com/#mcp-config-pack](https://kit.sdvsignal.com/#mcp-config-pack?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=gh-readme-kit-one-tool-mcp-49).
+Details and the full list: [kit.sdvsignal.com/#mcp-config-pack](https://kit.sdvsignal.com/?utm_source=github&utm_medium=organic&utm_campaign=afm-find&utm_content=gh-readme-kit-one-tool-mcp-49#mcp-config-pack).
 If you would rather have them wired *into your repo* alongside hooks and skills, that is
-[Setup Sprint $99](https://kit.sdvsignal.com/#setup-sprint), not this.
+[Setup Sprint $99](https://kit.sdvsignal.com/?utm_source=github&utm_medium=readme&utm_campaign=setup-sprint&utm_content=kit-one-tool-mcp#setup-sprint), not this.
 
 ## Free here vs. paid
 
